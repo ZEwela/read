@@ -11,3 +11,45 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.search{
+  position: relative;
+  box-shadow: 0 0 40px rgb(204, 204, 208);
+    
+  }
+
+  .search input{
+   height: 60px;
+   text-indent: 25px;
+   border: 2px solid #d6d4d4;
+
+
+  }
+
+
+  .search input:focus{
+
+   box-shadow: none;
+   border: 2px solid rgb(143, 143, 145);
+
+
+  }
+
+  .search .fa-search{
+
+   position: absolute;
+   top: 20px;
+   left: 16px;
+
+  }
+
+  .search button{
+
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   height: 50px;
+   width: 40px;
+   background: rgb(116, 116, 119);
+
+  }
