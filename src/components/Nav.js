@@ -10,7 +10,7 @@ export default function Nav () {
                     <div class="col-sm-4">
                         <Header text="Read"/>
                     </div>
-                    <div>
+                    <div class="col-sm-4">
                         <SearchBar/>
                     </div>
                     <div class="col-sm-4">
