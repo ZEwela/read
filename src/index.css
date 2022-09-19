@@ -12,86 +12,72 @@ code {
     monospace;
 }
 
-.search{
-  position: fixed;
-  top: 80px;
-  width: 20%;
-  left: 20px;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-    
-  }
-
-  .search input{
-   height: 60px;
-   text-indent: 25px;
-   border: 2px solid rgb(230, 230, 235);
-
-
-  }
-
-
-  .search input:focus{
-
-   box-shadow: none;
-   border: 2px solid rgb(230, 230, 235);
-
-
-  }
-
-  .search .fa-search{
-
-   position: absolute;
-   top: 20px;
-   left: 16px;
-
-  }
-
-  .search button{
-
-   position: absolute;
-   top: 5px;
-   right: 5px;
-   height: 50px;
-   width: 40px;
-   background: rgb(116, 116, 119);
-
-  }
-
-  .sidebar {
-    position: fixed;
-    top: 150px;
-    bottom: 0;
-    left: 20px;
-    padding: 0 0 0; /* Height of navbar */
-    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
-    width: 283px;
-    z-index: 600;
-    }
+/* Nav */
+.nav {
+  flex-wrap: nowrap;
   
-  .card-adjustment {
-    position: relative;
-    top: 24px;
-    width: 70%;
-    margin-left: 22.4rem;
-    margin-bottom: 1.5rem;
+}
 
-  }
+/* SearchBar */
+.searchbar {
+  margin-top: 0.5em;
+  border: rgba(251, 246, 246, 0.05)
+}
 
-  .columne-comments {
-    width: 10px;
-  }
+/* CategoriesMenu */
+.categories-menu {
+  position: relative;
+  top: 0.5em;
+  right: -13em;
+}
 
-  .comment {
-    width: 100%;
-    display: block;
-  }
+/* Categories */
+.sidebar {
+  position: fixed;
+  top: 150px;
+  bottom: 0;
+  right: 20px;
+  padding: 0 0 0; /* Height of navbar */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+  width: 280px;
+  z-index: 600;
+}
 
-  .comment-author {
-    float: left;
-    margin-bottom: 0.5rem;
-    display: flex;
-  }
+/* Card */
+.card {
+  margin-bottom: 2rem;
+  padding: 0;
+  width: 80%;
+}
 
-  .comment-body {
-    margin: 0.5em;
-  }
+.footer-card {
+  margin-bottom: 1em;
+  
+}
+
+/* Comments */
+.comments-row {
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-.5 * var(--bs-gutter-x));
+  margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+/* Comment */
+
+.comment {
+  margin-bottom: 1em;
+}
+
+.comment-author {
+  float: left;
+  margin-bottom: 0.5rem;
+  display: flex;
+}
+
+.comment-body {
+  margin: 0.5em;
+}
+
+
+

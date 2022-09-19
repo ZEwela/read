@@ -1,9 +1,9 @@
 
 export default function Header({text}){
     return (
-        <header className="container">
-            <div className="row text-center">
-                <h1 className="col-sm-12">{text}</h1>
+        <header className="container header">
+            <div className="row text-left">
+                <h1 className="col-sm-4">{text}</h1>
             </div>
         </header>
     )
