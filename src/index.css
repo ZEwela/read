@@ -13,15 +13,18 @@ code {
 }
 
 .search{
-  position: relative;
-  box-shadow: 0 0 40px rgb(204, 204, 208);
+  position: fixed;
+  top: 80px;
+  width: 20%;
+  left: 20px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
     
   }
 
   .search input{
    height: 60px;
    text-indent: 25px;
-   border: 2px solid #d6d4d4;
+   border: 2px solid rgb(230, 230, 235);
 
 
   }
@@ -30,7 +33,7 @@ code {
   .search input:focus{
 
    box-shadow: none;
-   border: 2px solid rgb(143, 143, 145);
+   border: 2px solid rgb(230, 230, 235);
 
 
   }
@@ -52,4 +55,43 @@ code {
    width: 40px;
    background: rgb(116, 116, 119);
 
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 150px;
+    bottom: 0;
+    left: 20px;
+    padding: 0 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 283px;
+    z-index: 600;
+    }
+  
+  .card-adjustment {
+    position: relative;
+    top: 24px;
+    width: 70%;
+    margin-left: 22.4rem;
+    margin-bottom: 1.5rem;
+
+  }
+
+  .columne-comments {
+    width: 10px;
+  }
+
+  .comment {
+    width: 100%;
+    display: block;
+  }
+
+  .comment-author {
+    float: left;
+    margin-bottom: 0.5rem;
+    display: flex;
+  }
+
+  .comment-body {
+    margin: 0.5em;
   }

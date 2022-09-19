@@ -3,8 +3,8 @@
 export default function SearchBar() {
     return (
         <div class="container">
-            <div class="row height d-flex justify-content-center align-items-center">
-                <div class="col-md-6">
+            <div class="row height d-flex flex-row-reverse align-items-center">
+                <div class="col-md-4">
                     <div class="search search-container">
                         <i class="fa fa-search"></i>
                         <input type="text" class="form-control" placeholder="Search"/>
