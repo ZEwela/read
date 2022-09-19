@@ -3,7 +3,7 @@ import Comments from "../containers/comments/Comments"
 
 export default function Card () {
     return (
-        <div class="card text-center">
+        <div class="card card-card text-center">
             <div class="card-header">
                 Title
             </div>

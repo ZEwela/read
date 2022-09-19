@@ -4,14 +4,14 @@ import Category from '../../components/Category';
 export default function Categories() {
     return (
         <>
-            <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
-            <div class="position-sticky">
-              <div class="list-group list-group-flush mx-3 mt-4">
-                <Header text="Subeddits"/>
+          <div class="container d-lg-flex collapse bg-white sidebar">
+  
+              <div class=" list-group list-group-flush sidebar-body">
+                <h3>Subeddits</h3>
+                {/* <Header text="Subeddits"/> */}
                 <Category text="Main"/>
               </div>
-            </div>
-          </nav>
+          </div>
       </>
     )
 }
