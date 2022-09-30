@@ -46,13 +46,20 @@ code {
 /* Categories */
 .sidebar {
   position: fixed;
-  height: 90%;
+  height: 80%;
   width: 20%;
   border: solid rgba(185, 185, 183, 0.703) 1px;
   border-radius: 5px;
 }
 .sidebar-body {
   width: 100%;
+}
+
+.categoriesList {
+  position: relative;
+  height: auto;
+  overflow-y: scroll
+
 }
 
 h3 {

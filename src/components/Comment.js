@@ -14,3 +14,4 @@ export default function Comment ({comment_body}){
         </div>
     )
 }
+

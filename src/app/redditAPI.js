@@ -2,21 +2,21 @@ export const API_ROOT = 'https://www.reddit.com';
 
 
 
-export const getCategories = async () => {
-  const response = await fetch(`${API_ROOT}/subreddits.json`);
-  const json = await response.json();
+// export const getCategories = async () => {
+//   const response = await fetch(`${API_ROOT}/subreddits.json`);
+//   const json = await response.json();
 
-  const categoriesList = json.data.children.map((category) => category.data);
+//   const categoriesList = json.data.children.map((category) => category.data);
  
-  const categoriesListDataSelected = categoriesList.map(category => {
-    const {id, title, name, url, display_name} = category;
-    const data = {id, title, name, url, display_name};
-    return data
-  });
-  console.log(categoriesListDataSelected)
-  return categoriesListDataSelected
+//   const categoriesListDataSelected = categoriesList.map(category => {
+//     const {id, title, name, url, display_name} = category;
+//     const data = {id, title, name, url, display_name};
+//     return data
+//   });
+//   console.log(categoriesListDataSelected)
+//   return categoriesListDataSelected
 
-};
+// };
 
 export const getPostsByCategory = async (category) => {
     const response = await fetch(`${API_ROOT}/r/${category}.json`);
