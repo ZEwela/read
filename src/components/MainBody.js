@@ -1,5 +1,6 @@
 import Categories from '../containers/categories/Categories';
 import Cards from '../containers/cards/Cards';
+import { Routes, Route } from 'react-router-dom';
 
 export default function MainBody () {
     return (
