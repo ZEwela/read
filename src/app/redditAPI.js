@@ -1,9 +1,3 @@
-
-
-export const sayHello = () => {
-    console.log('eeeh');
-}
-
 export const API_ROOT = 'https://www.reddit.com';
 
 
@@ -27,19 +21,31 @@ export const getCategories = async () => {
 export const getPostsByCategory = async (category) => {
     const response = await fetch(`${API_ROOT}/r/${category}.json`);
     const json = await response.json();
-    const data = json.data.children.map((post) => post.data);
+
+    const postsList = json.data.children.map((post) => post.data);
   
-    console.log(data)
-    return data
+    const postsListDataSelected = postsList.map(post => {
+      const {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media} = post;
+      const data = {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media};
+      return data
+    });
+    console.log(postsListDataSelected)
+    return postsListDataSelected
   
   }
 
 export const getCommentsForPost = async (permalink) => {
     const response = await fetch(`${API_ROOT}${permalink}.json`);
     const json = await response.json();
-    const data = json[1].data.children.map((comment) => comment.data);
 
-    console.log(data);
-    return data
+    const commentsList = json[1].data.children.map((comment) => comment.data);
+
+    const commentsListDataSelected = commentsList.map(comment => {
+      const {author, body, id, parent_id} = comment;
+      const data = {author, body, id, parent_id};
+      return data
+    });
+    console.log(commentsListDataSelected)
+    return commentsListDataSelected
 }
 
