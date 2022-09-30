@@ -1,26 +1,31 @@
 
+import Cards from "../containers/cards/Cards";
 import Comments from "../containers/comments/Comments"
 
-export default function Card () {
+export default function Card ({card}) {
+    const timestamp = card.created_utc;
+    const date = new Date(timestamp * 1000);
+    const createdDate = date.toLocaleDateString("en-GB");
+
     return (
         <div class="card card-card text-center">
             <div class="card-header">
-                Title
+                {card.title}
             </div>
             <div class="card-body">
-                <p class="card-text">body</p>
+                <p><a class="card-text" href={card.url} target="_blank">{card.url}</a></p>
                 <figure class="figure">
-                  <img src="..." class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure."/>
+                  <img src={card.url} class="figure-img img-fluid rounded" alt="image"/>
                 </figure>
             </div>
             <div class="card-footer text-muted">
               <div class="container">
                 <div class="row d-flex justify-content-around footer-card">
                   <div class="col-sm-3 align-middle align-self-center">
-                    DATE OF PUBLISH
+                    {createdDate}
                   </div>
                   <div class="col-sm-3 align-middle align-self-center">
-                    AUTHOR
+                    {card.author}
                   </div>
                   <div class="col-sm-3 align-middle">
                     <button class="btn btn-outline-secondary " type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">

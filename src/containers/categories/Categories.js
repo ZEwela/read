@@ -26,7 +26,7 @@ export default function Categories() {
               <h3>Subeddits</h3>
               <div class="categoriesList">
                 {categories.map(category => 
-                  <Category text={category.display_name}/>
+                  <Category key={category.id} text={category.display_name}/>
                 )}
               </div>
             </div>

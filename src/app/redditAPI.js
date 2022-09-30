@@ -18,21 +18,20 @@ export const API_ROOT = 'https://www.reddit.com';
 
 // };
 
-export const getPostsByCategory = async (category) => {
-    const response = await fetch(`${API_ROOT}/r/${category}.json`);
-    const json = await response.json();
+// export const getPostsByCategory = async (category) => {
+//     const response = await fetch(`${API_ROOT}/r/${category}.json`);
+//     const json = await response.json();
 
-    const postsList = json.data.children.map((post) => post.data);
+//     const postsList = json.data.children.map((post) => post.data);
   
-    const postsListDataSelected = postsList.map(post => {
-      const {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media} = post;
-      const data = {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media};
-      return data
-    });
-    console.log(postsListDataSelected)
-    return postsListDataSelected
-  
-  }
+//     const postsListDataSelected = postsList.map(post => {
+//       const {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media} = post;
+//       const data = {author, created_utc, name, id, permalink, subreddit, subreddit_id, title, score, link_flair_text, url, media};
+//       return data
+//     });
+//     console.log(postsListDataSelected)
+//     return postsListDataSelected
+// }
 
 export const getCommentsForPost = async (permalink) => {
     const response = await fetch(`${API_ROOT}${permalink}.json`);

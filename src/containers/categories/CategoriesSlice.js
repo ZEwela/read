@@ -14,7 +14,6 @@ export const loadAllCategories =  createAsyncThunk(
           const data = {id, title, name, url, display_name};
           return data
         });
-        console.log(categoriesListDataSelected)
         return categoriesListDataSelected
     }
 );
