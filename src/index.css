@@ -27,6 +27,15 @@ code {
   border: rgba(251, 246, 246, 0.05)
 }
 
+#closeBTN {
+  border-color: rgba(12 11 14 / 24%);
+  border-radius: 0%;
+}
+
+#searchSpan {
+  border-radius: 0%;
+}
+
 /* CategoriesMenu */
 .categories-menu {
   display: flex;
