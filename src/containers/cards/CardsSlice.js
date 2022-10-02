@@ -25,7 +25,9 @@ const cardsSlice = createSlice({
     initialState: {
         cards: [],
         isLoadingCards: false,
-        hasError: false
+        hasError: false,
+        isLoadingComments: false, 
+        hasErrorComments: false
     },
     extraReducers: (builder) => {
         builder 

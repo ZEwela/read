@@ -23,6 +23,7 @@ export default function Cards () {
     const cards = useSelector(selectCards);
 
     return (
+        console.log('from CArds', cards),
         <>
             <div class="container">
                 <div class="row">

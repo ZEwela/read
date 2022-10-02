@@ -1,10 +1,24 @@
 import Comment from '../../components/Comment';
 
-export default function Comments (){
+
+export default function Comments ({comments}){
+
+
+    if (!comments) {
+        return null
+    }
+
+    // if (isLoadingComments) {
+    //     return <div>Loading...</div>;
+    //   }
+    // const commentsForCard = comments[card_id];
+    
+
     return (
         <div class="comments-row">
-            <Comment comment_body="Hello Hello "/>
-            <Comment comment_body="Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident."/>
-      </div>
+            {comments.map((comment) => (
+              <Comment comment={comment}/>
+            ))}
+        </div>
     )
 }

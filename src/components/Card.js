@@ -1,8 +1,14 @@
 
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Cards from "../containers/cards/Cards";
 import Comments from "../containers/comments/Comments"
+import { getComments } from "../containers/comments/CommentsSlice";
+import { selectAllComments } from "../containers/comments/CommentsSlice";
 
 export default function Card ({card}) {
+    const dispatch = useDispatch();
+    
     const timestamp = card.created_utc;
     const date = new Date(timestamp * 1000);
     const createdDate = date.toLocaleDateString("en-GB");
@@ -26,6 +32,19 @@ export default function Card ({card}) {
       }
     }
 
+    const [isCollapse, setIsCollapse] = useState(false);
+      
+    const onClickCollapse = () => {
+      setIsCollapse(current => !current);
+    }
+
+    useEffect(() => {
+      dispatch(getComments(card.permalink))
+    }, [isCollapse]);
+
+    const comments = useSelector(selectAllComments);
+
+
     return (
         <div class="card card-card text-center">
             <div class="card-header">
@@ -34,25 +53,27 @@ export default function Card ({card}) {
             <div class="card-body">
                 {body()}
             </div>
-            <div class="card-footer text-muted">
+            <div class="card-footer">
               <div class="container">
                 <div class="row d-flex justify-content-around footer-card">
-                  <div class="col-sm-3 align-middle align-self-center">
-                    {createdDate}
+                  <div class="row d-flex justify-content-around always-display" >
+                    <div class="col-sm-3 align-middle align-self-center">
+                      {createdDate}
+                    </div>
+                    <div class="col-sm-3 align-middle align-self-center">
+                      {card.author}
+                    </div>
+                    <div class="col-sm-3 align-middle">
+                      <button class="btn btn-outline-secondary btn-comments" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample"  onClick={onClickCollapse}>
+                        <i class="fa-regular fa-comment"></i>
+                      </button>
+                    </div>
                   </div>
-                  <div class="col-sm-3 align-middle align-self-center">
-                    {card.author}
-                  </div>
-                  <div class="col-sm-3 align-middle">
-                    <button class="btn btn-outline-secondary " type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                      </svg>
-                    </button>
+                  <div class={isCollapse ? 'collapse show' : 'collapse'} id="collapseExample">
+                      <Comments comments={comments[card.name]}/>
                   </div>
                 </div>
               </div>
-              <Comments/>
             </div>
         </div>
     )

@@ -46,3 +46,4 @@ export const selectAllCategories = (state) => state.categories.categories;
 export const isLoadingCategories = (state) => state.categories.isLoadingCategories;
 
 export default categoriesSlice.reducer;
+

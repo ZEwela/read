@@ -33,18 +33,18 @@ export const API_ROOT = 'https://www.reddit.com';
 //     return postsListDataSelected
 // }
 
-export const getCommentsForPost = async (permalink) => {
-    const response = await fetch(`${API_ROOT}${permalink}.json`);
-    const json = await response.json();
+// export const getCommentsForPost = async (permalink) => {
+//     const response = await fetch(`${API_ROOT}${permalink}.json`);
+//     const json = await response.json();
 
-    const commentsList = json[1].data.children.map((comment) => comment.data);
+//     const commentsList = json[1].data.children.map((comment) => comment.data);
 
-    const commentsListDataSelected = commentsList.map(comment => {
-      const {author, body, id, parent_id} = comment;
-      const data = {author, body, id, parent_id};
-      return data
-    });
-    console.log(commentsListDataSelected)
-    return commentsListDataSelected
-}
+//     const commentsListDataSelected = commentsList.map(comment => {
+//       const {author, body, id, parent_id} = comment;
+//       const data = {author, body, id, parent_id};
+//       return data
+//     });
+//     console.log(commentsListDataSelected)
+//     return commentsListDataSelected
+// }
 

@@ -82,6 +82,10 @@ img {
   max-height: 512px;
 }
 
+.always-display {
+  margin: 0%;
+}
+
 /* Comments */
 .comments-row {
   flex-wrap: wrap;
@@ -91,9 +95,9 @@ img {
 }
 
 /* Comment */
-
 .comment {
   margin-bottom: 1em;
+  margin-top: 1em;
 
 }
 
