@@ -17,7 +17,7 @@ export default function Comments ({comments}){
     return (
         <div class="comments-row">
             {comments.map((comment) => (
-              <Comment comment={comment}/>
+              <Comment key={comment.id} comment={comment}/>
             ))}
         </div>
     )
