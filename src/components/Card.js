@@ -7,16 +7,32 @@ export default function Card ({card}) {
     const date = new Date(timestamp * 1000);
     const createdDate = date.toLocaleDateString("en-GB");
 
+    const body = () => {
+      if (card.url.slice(-3) === 'jpg') {
+        return (
+          <figure class="figure">
+            <img src={card.url} class="figure-img img-fluid rounded" alt="image"/>
+          </figure>
+        )
+      } else {
+        return (
+          <p>
+            <a class="card-text" href={card.url} target="_blank">
+              {`${card.url.slice(0,28)}...`}
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </p>
+        )
+      }
+    }
+
     return (
         <div class="card card-card text-center">
             <div class="card-header">
                 {card.title}
             </div>
             <div class="card-body">
-                <p><a class="card-text" href={card.url} target="_blank">{card.url}</a></p>
-                <figure class="figure">
-                  <img src={card.url} class="figure-img img-fluid rounded" alt="image"/>
-                </figure>
+                {body()}
             </div>
             <div class="card-footer text-muted">
               <div class="container">
