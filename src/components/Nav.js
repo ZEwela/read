@@ -1,4 +1,4 @@
-import SearchBar from "./SearchBar";
+import SearchBar from "../containers/search/SearchBar";
 import Header from "./Header";
 import CategoriesMenu from "./CategoriesMenu";
 

@@ -4,7 +4,7 @@ import { selectCards, isLoading } from "./CardsSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { selectSearchTerm } from "../../components/SearchBarSlice";
+import { selectSearchTerm } from "../search/SearchBarSlice";
 
 
 
