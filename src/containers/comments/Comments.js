@@ -3,7 +3,6 @@ import Comment from '../../components/Comment';
 
 export default function Comments ({comments}){
 
-
     if (!comments) {
         return null
     }

@@ -40,7 +40,7 @@ export default function Card ({card}) {
 
     useEffect(() => {
       dispatch(getComments(card.permalink))
-    }, [isCollapse]);
+    }, [setIsCollapse]);
 
     const comments = useSelector(selectAllComments);
 
