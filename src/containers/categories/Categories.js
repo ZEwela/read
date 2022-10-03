@@ -17,19 +17,16 @@ export default function Categories() {
   if (isLoading) {
     return <div>Loading...</div>;
   }
-
+ 
   return (
       <>
-        <div class="container d-lg-flex collapse bg-white sidebar">
-
-            <div class=" list-group list-group-flush sidebar-body">
-              <h3>Subeddits</h3>
-              <div class="categoriesList">
-                {categories.map(category => 
-                  <Category key={category.id} text={category.display_name}/>
-                )}
-              </div>
-            </div>
+        <div class=" list-group list-group-flush sidebar-body">
+          <h3>Subeddits</h3>
+          <div class="categoriesList">
+            {categories.map(category => 
+              <Category key={category.id} text={category.display_name}/>
+            )}
+          </div>
         </div>
     </>
   )

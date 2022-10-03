@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.noscroll {
+  overflow: hidden;
+
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -41,6 +46,22 @@ code {
   display: flex;
   justify-content: end;
   margin-top: 0.5em;
+}
+
+.menu {
+  display: block;
+  height: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 60px;
+  background: rgb(201, 207, 207);
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+  max-width: 290px;
+  z-index: 1;
 }
 
 /* Categories */

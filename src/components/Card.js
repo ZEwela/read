@@ -20,7 +20,21 @@ export default function Card ({card}) {
             <img src={card.url} class="figure-img img-fluid rounded" alt="image"/>
           </figure>
         )
-      } else {
+      } else if (card.url[8] === 'v'){
+          return (
+            <figure class="figure">
+              <video width="500" height="400" controls>
+                <source src={card.media.reddit_video.fallback_url}/>
+              </video>
+              <p>
+                <a class="card-text" href={card.url} target="_blank">
+                  {`${card.url.slice(0,28)}...`}
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </p>
+            </figure>
+        )
+      } else {  
         return (
           <p>
             <a class="card-text" href={card.url} target="_blank">
