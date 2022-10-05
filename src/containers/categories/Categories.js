@@ -21,7 +21,7 @@ export default function Categories() {
   return (
       <>
         <div class=" list-group list-group-flush sidebar-body">
-          <h3>Subeddits</h3>
+          <h3>Categories</h3>
           <div class="categoriesList">
             {categories.map(category => 
               <Category key={category.id} text={category.display_name}/>

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(197, 235, 222);
+
 }
 
 body.noscroll {
@@ -15,6 +17,13 @@ body.noscroll {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* Header */
+#logo {
+  color: rgb(15, 88, 197);
+  font-weight: bold;
+  padding-left: 15px;
+  margin-top: 7px;
 }
 
 /* Nav */
@@ -35,11 +44,14 @@ code {
 #closeBTN {
   border-color: rgba(12 11 14 / 24%);
   border-radius: 0%;
+  background-color: white;
 }
 
 #searchSpan {
   border-radius: 0%;
 }
+
+
 
 /* CategoriesMenu */
 .categories-menu {
@@ -71,6 +83,8 @@ code {
   width: 20%;
   border: solid rgba(185, 185, 183, 0.703) 1px;
   border-radius: 5px;
+  background-color: rgb(224, 244, 237);
+  
 }
 .sidebar-body {
   width: 100%;
@@ -79,13 +93,18 @@ code {
 .categoriesList {
   position: relative;
   height: auto;
-  overflow-y: scroll
-
+  overflow-y: scroll;
 }
 
 h3 {
   text-align: center;
   margin-top: 0.3em;
+}
+
+/* Category */
+.category {
+  background-color: rgb(238, 249, 245);
+  border: none
 }
 
 /* Card */
@@ -105,6 +124,21 @@ img {
 
 .always-display {
   margin: 0%;
+}
+
+.card-header {
+  background-color:  rgb(208, 247, 247);
+  border: none;
+  font-weight: 600;
+}
+
+.card-body {
+  background-color:  rgb(228, 246, 246); 
+}
+
+.card-footer {
+  background-color:  rgb(214, 248, 248);
+  font-size: small;
 }
 
 /* Comments */

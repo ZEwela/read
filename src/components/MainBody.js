@@ -10,7 +10,7 @@ export default function MainBody () {
                     <Cards/>
                 </div>
                 <div class="col-3">
-                    <div class="container d-lg-flex collapse bg-white sidebar">
+                    <div class="container d-lg-flex collapse sidebar">
                         <Categories/>
                     </div>
                 </div>  

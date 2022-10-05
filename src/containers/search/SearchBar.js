@@ -32,7 +32,7 @@ export default function SearchBar() {
               </div>
               <input type="text" class="form-control" aria-label="Search" placeholder="Search..." value={search} onChange={onChangeSetSearch}></input>
               <div class="input-group-append">
-              <button class="btn btn-outline-secondary" id="closeBTN" type="button" onClick={onClickClearSearch}>x</button>
+              <button class="btn btn-outline-secondary" id="closeBTN" type="button" onClick={onClickClearSearch}><i class="fa-solid fa-xmark"></i></button>
               </div>
             </div>
         </div>
